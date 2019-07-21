@@ -5,7 +5,7 @@ module OfxS4m
 
       def initialize(ofx_body)
         @ofx_body = Nokogiri::HTML.parse(clear_body(ofx_body)) if ofx_body
-        binding.pry
+        #binding.pry
       end
 
       private
