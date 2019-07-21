@@ -17,8 +17,8 @@ module OfxS4m
     attr_reader :body
 
     def initialize(filename = nil)
-      file_text = file_read(filename) unless filename.nil?
-      prepare_ofx(file_text) unless file_text.nil?
+      file_text = file_read(filename) if filename
+      prepare_ofx(file_text) if file_text
     end
 
     private

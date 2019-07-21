@@ -9,7 +9,7 @@ module OfxS4m
 
     private
     def clear_head
-      unless @head.nil?
+      if @head
         @head = @head.split("\n").map{|item| item.split(":") if item.split(":").size == 2 }.compact.to_h
         @version = @head["VERSION"] unless @head.nil? || !@head.key?('VERSION')
       end
